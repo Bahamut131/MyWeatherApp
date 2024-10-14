@@ -17,6 +17,7 @@ dagger = "2.51"
 retrofit = "2.11.0"
 parcelize = "2.0.21"
 glide = "1.0.0-beta01"
+okHttp ="4.12.0"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -46,6 +47,8 @@ dagger-compiler = {group = "com.google.dagger", name = "dagger-compiler",version
 retrofit-core = {group = "com.squareup.retrofit2", name = "retrofit",version.ref = "retrofit" }
 retrofit-converter = {group = "com.squareup.retrofit2", name = "converter-gson",version.ref = "retrofit" }
 glide-compose = { group = "com.github.bumptech.glide",name = "compose", version.ref = "glide" }
+okHttp-interceptor = { group = "com.squareup.okhttp3",name = "logging-interceptor", version.ref = "okHttp" }
+okHttp-core = { group = "com.squareup.okhttp3",name = "okhttp", version.ref = "okHttp" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
