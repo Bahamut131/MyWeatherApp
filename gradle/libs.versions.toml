@@ -9,6 +9,7 @@ lifecycleRuntimeKtx = "2.8.6"
 activityCompose = "1.9.2"
 composeBom = "2024.04.01"
 
+
 mvikotlin = "3.2.1"
 decompose = "3.1.0"
 room = "2.6.1"
@@ -18,6 +19,8 @@ retrofit = "2.11.0"
 parcelize = "2.0.21"
 glide = "1.0.0-beta01"
 okHttp ="4.12.0"
+serialization = "2.0.20"
+playServicesLocation = "21.3.0"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -49,6 +52,7 @@ retrofit-converter = {group = "com.squareup.retrofit2", name = "converter-gson",
 glide-compose = { group = "com.github.bumptech.glide",name = "compose", version.ref = "glide" }
 okHttp-interceptor = { group = "com.squareup.okhttp3",name = "logging-interceptor", version.ref = "okHttp" }
 okHttp-core = { group = "com.squareup.okhttp3",name = "okhttp", version.ref = "okHttp" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -56,4 +60,4 @@ jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = 
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ksp = { id ="com.google.devtools.ksp" , version.ref = "ksp" }
 parcelize = { id ="org.jetbrains.kotlin.plugin.parcelize" , version.ref = "parcelize" }
-
+serialization ={ id = "org.jetbrains.kotlin.plugin.serialization", version.ref ="serialization"}

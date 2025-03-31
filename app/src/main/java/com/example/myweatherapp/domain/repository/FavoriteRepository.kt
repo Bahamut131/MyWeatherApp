@@ -13,4 +13,6 @@ interface FavoriteRepository {
 
     suspend fun removeFromFavorite(cityId: Int)
 
+    suspend fun addCityByLocation(latitude: String,longitude : String)
+
 }

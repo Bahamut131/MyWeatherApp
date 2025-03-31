@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.RoomDatabase.Builder
 import com.example.myweatherapp.data.local.model.CityDbModel
 
 @Database(entities = [CityDbModel::class], version = 1, exportSchema = false)
@@ -24,11 +23,9 @@ abstract class FavoriteDataBase : RoomDatabase() {
             }
 
             synchronized(LOCK){
-
                 INSTANCE?.let {
                     return it
                 }
-
                 val db = Room.databaseBuilder(
                     context = context,
                     name = DB_NAME,
@@ -36,12 +33,8 @@ abstract class FavoriteDataBase : RoomDatabase() {
                 ).build()
 
                 INSTANCE = db
-
                 return db
-
             }
-
         }
     }
-
 }

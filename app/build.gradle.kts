@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.parcelize)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.serialization)
 }
 
 android {
@@ -71,6 +72,7 @@ dependencies {
     implementation(libs.glide.compose)
 
     implementation(libs.dagger.core)
+    implementation(libs.play.services.location)
     ksp(libs.dagger.compiler)
 
     implementation(libs.room.core)
