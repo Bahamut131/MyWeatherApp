@@ -8,20 +8,20 @@ import retrofit2.http.Query
 
 interface ApiService {
 
-    @GET("current.json?key=")
+    @GET("current.json")
     suspend fun loadCurrentWeather(
         @Query("q") query: String
     ) : WeatherCurrentDto
 
 
 
-    @GET("forecast.json?key=")
+    @GET("forecast.json")
     suspend fun loadForecast(
         @Query("q") query: String,
         @Query("days") days: Int = 4,
     ) : WeatherForecastDto
 
-    @GET("search.json?key=")
+    @GET("search.json")
     suspend fun searchCity(
         @Query("q") cityName : String
     ) : List<CityDto>

@@ -1,6 +1,7 @@
 package com.example.myweatherapp.presentation
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -16,9 +17,13 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         val apiService = ApiFactory.apiService
         CoroutineScope(Dispatchers.Main).launch {
-            apiService.loadCurrentWeather("London")
-            apiService.loadForecast("London")
-            apiService.searchCity("London")
+            val a = apiService.loadCurrentWeather("London")
+            val b = apiService.loadForecast("London")
+            val c =apiService.searchCity("London")
+
+            Log.d("MainActivity","${a}")
+            Log.d("MainActivity","${b}")
+            Log.d("MainActivity","${c}")
         }
         setContent {
             MyWeatherAppTheme {
