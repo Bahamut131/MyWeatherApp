@@ -54,6 +54,9 @@ android {
 
 dependencies {
 
+    implementation(libs.okHttp.interceptor)
+    implementation(libs.okHttp.core)
+
     implementation(libs.icons)
 
     implementation(libs.retrofit.core)
