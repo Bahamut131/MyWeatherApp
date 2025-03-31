@@ -1,7 +1,5 @@
 package com.example.myweatherapp.data.repository
 
-import com.example.myweatherapp.data.local.db.FavoriteCitiesDao
-import com.example.myweatherapp.data.mapper.toEntity
 import com.example.myweatherapp.data.mapper.toEntityList
 import com.example.myweatherapp.data.network.api.ApiService
 import com.example.myweatherapp.domain.entity.City
