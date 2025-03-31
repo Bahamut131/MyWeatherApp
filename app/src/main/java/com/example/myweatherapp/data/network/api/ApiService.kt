@@ -18,11 +18,16 @@ interface ApiService {
     @GET("forecast.json")
     suspend fun loadForecast(
         @Query("q") query: String,
-        @Query("days") days: Int = 4,
+        @Query("days") days: Int = 5
     ) : WeatherForecastDto
 
     @GET("search.json")
     suspend fun searchCity(
         @Query("q") cityName : String
+    ) : List<CityDto>
+
+    @GET("search.json")
+    suspend fun searchCityByLocation(
+        @Query("q") location : String
     ) : List<CityDto>
 }

@@ -1,14 +1,15 @@
 package com.example.myweatherapp.di
 
 import android.content.Context
-import dagger.Binds
+import com.example.myweatherapp.presentation.MainActivity
 import dagger.BindsInstance
 import dagger.Component
 
 @ApplicationScope
-@Component(modules = [DataModule::class])
+@Component(modules = [DataModule::class, PresentationModule::class])
 interface ApplicationComponent {
 
+    fun inject(activity: MainActivity)
 
 
     @Component.Factory

@@ -1,5 +1,6 @@
 package com.example.myweatherapp.data.network.api
 
+import androidx.compose.ui.text.intl.Locale
 import com.example.myweatherapp.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -12,6 +13,7 @@ object ApiFactory {
 
     private const val BASE_URL = "https://api.weatherapi.com/v1/"
     private const val KEY_PARAM ="key"
+    private const val PARAM_LANG ="lang"
 
     private val interceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
@@ -27,6 +29,7 @@ object ApiFactory {
                 val originalRequest = chain.request()
                 val newUrl = originalRequest.url.newBuilder()
                     .addQueryParameter(KEY_PARAM, BuildConfig.WEATHER_API_KEY)
+                    .addQueryParameter(PARAM_LANG, "uk")
                     .build()
                 val newRequest = originalRequest.newBuilder().url(newUrl).build()
                 chain.proceed(newRequest)

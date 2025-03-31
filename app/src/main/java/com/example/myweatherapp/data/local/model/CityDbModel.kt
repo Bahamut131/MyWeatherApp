@@ -2,7 +2,6 @@ package com.example.myweatherapp.data.local.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.myweatherapp.domain.entity.City
 
 @Entity("cities")
 data class CityDbModel(
